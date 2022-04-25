@@ -1,0 +1,15 @@
+<div>Roll: <%= @tileset.roll %></div>
+
+<% @tileset.walls.each do |key, tiles| %>
+  <div><%= key %></div>
+  <ul>
+    <% tiles.each do |tile| %>
+      <li>
+        <span><%= tile.tile_type %>: <%= tile.value %></span>
+        <% if tile.is_dora %>
+          <span>DORA ID</span>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
